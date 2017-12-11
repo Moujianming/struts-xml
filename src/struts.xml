@@ -12,6 +12,9 @@
  <action name="showProduct" class="com.action.ProductAction" method="show">
  <result name="show">show.jsp</result>
  </action>
+  <action name="addProduct" class="com.action.ProductAction" method="add">
+ <result name="show">show.jsp</result>
+ </action>
 </package>
  
 </struts>
