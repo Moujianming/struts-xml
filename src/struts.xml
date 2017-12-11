@@ -15,6 +15,9 @@
   <action name="addProduct" class="com.action.ProductAction" method="add">
  <result name="show">show.jsp</result>
  </action>
+ <action name="upload" class="com.action.UploadAction" method="upload">
+    <result name="success">success.jsp</result>
+  </action> 
 </package>
  
 </struts>
