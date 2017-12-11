@@ -8,5 +8,6 @@
 </head>
 <body>
 ${product.name}
+${name}
 </body>
 </html>
