@@ -4,6 +4,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
  
 <struts>
+<constant name="struts.multipart.maxSize" value="10240000"></constant><!-- 设置上传文件的最大值 -->
   <package name="basicstruts" extends="struts-default">
  
   <action name="index">
@@ -18,6 +19,9 @@
  <action name="upload" class="com.action.UploadAction" method="upload">
     <result name="success">success.jsp</result>
   </action> 
+  <action name="listProduct" class="com.action.ProductAction" method="list"><!-- 通过http://..../listProduct进行访问 -->
+  <result name="list">list.jsp</result>
+  </action>
 </package>
  
 </struts>
