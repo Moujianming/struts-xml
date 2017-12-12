@@ -35,5 +35,6 @@ ${p.name}<br>
 </tr>
 </s:iterator>
 </table>
+<s:debug></s:debug>
 </body>
 </html>
