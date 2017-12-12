@@ -10,18 +10,26 @@
   <action name="index">
     <result>index.jsp</result>
   </action>    
- <action name="showProduct" class="com.action.ProductAction" method="show">
+ <!-- <action name="showProduct" class="com.action.ProductAction" method="show">
  <result name="show">show.jsp</result>
  </action>
   <action name="addProduct" class="com.action.ProductAction" method="add">
  <result name="show">show.jsp</result>
- </action>
+ </action> -->
  <action name="upload" class="com.action.UploadAction" method="upload">
     <result name="success">success.jsp</result>
   </action> 
-  <action name="listProduct" class="com.action.ProductAction" method="list"><!-- 通过http://..../listProduct进行访问 -->
+  <!-- <action name="listProduct" class="com.action.ProductAction" method="list">通过http://..../listProduct进行访问
   <result name="list">list.jsp</result>
+  </action> -->
+  <!-- 通配符 -->
+  <action name="*Product" class="com.action.ProductAction" method="{1}">
+  <result name="list">list.jsp</result>
+  <result name="show">show.jsp</result>
   </action>
+  <action name="addPageProduct" class="com.action.ProductAction" method="addPage">
+ <result name="addPage" type="redirect">addProduct.jsp?name=${name}</result>
+ </action>
 </package>
  
 </struts>

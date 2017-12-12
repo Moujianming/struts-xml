@@ -17,7 +17,9 @@ public class ProductAction {
 
 	private Product product;
 	private List<Product> products;
-	 private List<Category> categories =new ArrayList();
+	
+    private List<Category> categories =new ArrayList();
+    private String name;
 
 	public String list()
 	{
@@ -67,6 +69,11 @@ public class ProductAction {
 		
 		return "list";
 	}
+	public String addPage()
+	{
+		name = "default name";
+		return "addPage";
+	}
 	public String show()
 	{
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -109,6 +116,12 @@ public class ProductAction {
 	public void setCategories(List<Category> categories) {
 		System.out.println("setcategory");
 		this.categories = categories;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	
