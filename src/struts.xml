@@ -12,10 +12,11 @@
   </action>    
  <!-- <action name="showProduct" class="com.action.ProductAction" method="show">
  <result name="show">show.jsp</result>
- </action>
+ </action>-->
   <action name="addProduct" class="com.action.ProductAction" method="add">
+ <result name="input">addProduct.jsp</result>
  <result name="show">show.jsp</result>
- </action> -->
+ </action> 
  <action name="upload" class="com.action.UploadAction" method="upload">
     <result name="success">success.jsp</result>
   </action> 
@@ -27,9 +28,9 @@
   <result name="list">list.jsp</result>
   <result name="show">show.jsp</result>
   </action>
-  <action name="addPageProduct" class="com.action.ProductAction" method="addPage">
+  <!-- <action name="addPageProduct" class="com.action.ProductAction" method="addPage">
  <result name="addPage" type="redirect">addProduct.jsp?name=${name}</result>
- </action>
+ </action> -->
 </package>
  
 </struts>

@@ -12,8 +12,9 @@ import org.apache.struts2.ServletActionContext;
 import com.bean.Category;
 import com.bean.Product;
 import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
 
-public class ProductAction {
+public class ProductAction extends ActionSupport{
 
 	private Product product;
 	private List<Product> products;
@@ -21,6 +22,13 @@ public class ProductAction {
     private List<Category> categories =new ArrayList();
     private String name;
 
+    //—È÷§
+    public void validate() {
+    	if(product.getName().length() ==0)
+    	{
+    		addFieldError("product.name", "Can't empty");
+    	}
+    }
 	public String list()
 	{
 		Category category1 =new Category();
