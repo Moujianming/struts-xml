@@ -17,9 +17,9 @@
  <result name="input">addProduct.jsp</result>
  <result name="show">show.jsp</result>
  </action> 
- <action name="upload" class="com.action.UploadAction" method="upload">
+<!--  <action name="upload" class="com.action.UploadAction" method="upload">
     <result name="success">success.jsp</result>
-  </action> 
+  </action>  -->
   <!-- <action name="listProduct" class="com.action.ProductAction" method="list">通过http://..../listProduct进行访问
   <result name="list">list.jsp</result>
   </action> -->
